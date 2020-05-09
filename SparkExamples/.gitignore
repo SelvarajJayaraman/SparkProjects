@@ -1,0 +1,8 @@
+.settings/
+.project
+
+SparkCoreExamples/.classpath
+SparkCoreExamples/.project
+SparkCoreExamples/.settings/
+SparkCoreExamples/target/
+SparkCoreExamples/.cache-main
