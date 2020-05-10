@@ -9,9 +9,9 @@ object CreatingSparkSession {
    def main(args: Array[String]){
      
       val sparkSession = SparkSession.builder()
-                                                        .appName("Creation Spark Session")
-                                                        .master("local[*]")
-                                                        .getOrCreate();
+                                                                            .appName("Creation Spark Session")
+                                                                                  .master("local[*]")
+                                                                                      .getOrCreate();
       
       val sc = sparkSession.sparkContext;
       

@@ -9,7 +9,9 @@ object CreatingSparkContext {
   
   def main(args: Array[String]){
     
-    val sparkConf = new SparkConf().setMaster("local[*]").setAppName("SparkContext creation");
+    val sparkConf = new SparkConf()
+                                                      .setMaster("local[*]")
+                                                          .setAppName("SparkContext creation");
     
     val sc = new SparkContext(sparkConf);
     
