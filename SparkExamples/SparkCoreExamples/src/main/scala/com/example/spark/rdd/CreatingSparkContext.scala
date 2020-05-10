@@ -31,7 +31,7 @@ object CreatingSparkContext {
     
     println("################## File Rdd Creation ####################################");
        
-    val fileRdd = sc.textFile("data/employee.csv");
+    val fileRdd = sc.textFile("src/main/resources/dataset/employee.csv");
     
     println("Number of Records in File:"+ fileRdd.count());
     
