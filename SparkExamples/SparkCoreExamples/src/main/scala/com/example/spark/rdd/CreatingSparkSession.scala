@@ -2,20 +2,22 @@ package com.example.spark.rdd
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkContext;
+import org.apache.spark.sql.SparkSession;
 
-import java.io._;
-
-object CreatingSparkContext {
+object CreatingSparkSession {
   
-  def main(args: Array[String]){
-    
-    val sparkConf = new SparkConf().setMaster("local[*]").setAppName("SparkContext creation");
-    
-    val sc = new SparkContext(sparkConf);
-    
-    sc.setLogLevel("ERROR");
-    
-    println("################## RDD creation Using Spark context #######################");
+   def main(args: Array[String]){
+     
+      val sparkSession = SparkSession.builder()
+                                                        .appName("Creation Spark Session")
+                                                        .master("local[*]")
+                                                        .getOrCreate();
+      
+      val sc = sparkSession.sparkContext;
+      
+      sc.setLogLevel("ERROR");
+      
+    println("################## RDD creation Using Spark Session #######################");
     
     println("################## Dynamic Rdd creation ################################");
     
@@ -34,5 +36,5 @@ object CreatingSparkContext {
     println("Number of Records in File:"+ fileRdd.count());
     
     fileRdd.foreach(println);
-  }
+   }
 }
