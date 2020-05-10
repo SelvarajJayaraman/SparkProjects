@@ -29,6 +29,8 @@ object CreatingSparkSession {
     
     arrayRdd.foreach(print);
     
+    println("\n");
+    
     println("################## File Rdd Creation ####################################");
        
     val fileRdd = sc.textFile("src/main/resources/dataset/employee.csv");
